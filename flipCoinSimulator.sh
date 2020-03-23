@@ -178,26 +178,26 @@ function threeFlip() {
 	echo HHH percent: $( percentage $tripleHeadCount $noFlip ), TTT percent: $( percentage $tripleTailCount $noFlip ), HHT percent: $( percentage $headHeadTail $noFlip ), TTH percent: $( percentage $tailTailHead $noFlip ), HTH percent: $( percentage $headTailHead $noFlip ), THT percent: $( percentage $tailHeadTail $noFlip ) , THH percent: $( percentage $tailHeadHead $noFlip ), HTT percent: $( percentage $headTailTail $noFlip )
 }
 function main() {
-echo "----------Flip Coin Simulation----------"
-echo -e "Enter 1 to flip one coin \nEnter 2 to flip two coin \nEnter 3 to flip three coin"
-read -p "Enter your choice: " choice
-read -p "How many times you want to flip the coin: " timesFlip
+	echo "----------Flip Coin Simulation----------"
+	echo -e "Enter 1 to flip one coin \nEnter 2 to flip two coin \nEnter 3 to flip three coin"
+	read -p "Enter your choice: " choice
+	read -p "How many times you want to flip the coin: " timesFlip
 
-case $choice in
-	1)
-		oneFlip $timesFlip
-		maxOneFlip;;
-	2)
-		twoFlip $timesFlip
-		maxTwoFlip;;
-	3)
-		threeFlip $timesFlip
-		maxThreeFlip;;
-	*)
-		echo Invalid choice;;
-esac
+	case $choice in
+		1)
+			oneFlip $timesFlip
+			maxOneFlip;;
+		2)
+			twoFlip $timesFlip
+			maxTwoFlip;;
+		3)
+			threeFlip $timesFlip
+			maxThreeFlip;;
+		*)
+			echo Invalid choice;;
+	esac
 }
 
 main
 
-
+sleep 1
